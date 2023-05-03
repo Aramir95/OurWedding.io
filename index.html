@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Nuestra Boda A&W</title> 
+
+     <!-- fontawesome 4 -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+     <!--------------- Google Fonts ----------------->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@120;300;400;500;600&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+     <!-- owlcarousel  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+     integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
+     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- owlcarousel  -->
+
+     <!-- particles.js -->
+     <script src="https://npmcdn.com/particlesjs@2.0.2/dist/particles.min.js"></script>
+     
+     <!-- jquery cdn  -->
+     <script src="js/jquery-3.6.0.js"></script>
+
+     <!-- Bootstrap -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- CSS    -->
+     <link rel="stylesheet" href="css/style.css">  
+  </head>
+  <body>
+
+    <!---------------------- audio is invisible ------------------->
+    <div class="music">
+      <audio src="./audio/song.mp3" id="my_audio" loop="loop"></audio> 
+    </div>
+
+    <!---------------------- navigation starts here ------------------->
+    <div class="navigation nav-hide-show">
+
+      <nav class="inner">
+        <div class="logo">
+          <a href="#">Angel  <span class="jr">&</span>  Wendy</a>
+        </div>
+  
+        <ul class="menu">
+          <li><a class="active" href="#">FECHA</a></li>
+          <li><a href="#about">NOSOTROS</a></li>
+          <li><a href="#event-section">LA BODA</a></li>
+          <li><a href="#Protocol-section">RECOMENDACIONES</a></li>
+          <li><a href="#regalos">REGALOS</a></li>
+          <li><a href="#family">FAMILIA</a></li>
+        </ul>
+  
+        <div class="hamburger">
+          <i class="icon-bars fas fa-bars"></i>
+        </div>
+      </nav>
+  
+    </div>
+
+
+    <!---------------------- navigation ends here ------------------->
+
+    <!---------------------- Carousel-section  starts here ------------------->
+ 
+    <header>
+
+      <div class="owl-carousel owl-theme owl-carousel-1">
+        <div class="item item1"></div>
+        <div class="item item2"></div>      
+      </div> 
+
+      <div class="caption">
+        <h1>Angel & Wendy</h1>
+        <h2>¡ NOS CASAMOS !</h2>     
+        <!---------------------- countdown------------------->
+        <div class="countdown" >
+          <div class="countdown-timer" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="days"></span>
+              <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="hours"></span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="minutes"></span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="seconds"></span>
+              <span class="countdown-label">Segundos</span>
+            </div>
+          </div>
+          <div class="countdown-date">
+            <div class="countdown-date-line"></div>
+            <span class="countdown-date-text">30 de Abril del 2023</span>
+            <div class="countdown-date-line"></div>
+          </div>
+        </div> 
+        <i class="player fas fa-play"></i> 
+        <div id="song"><span class="glyphicon glyphicon-music"></span>  " Mi Vida Entera - Morat "</div> 
+      </div> 
+      <!---------------------- end countdown------------------->
+       
+    </header>
+    <!---------------------- Carousel-section ends here ------------------->
+   
+
+
+  <!----------------------- Invitation-card-section starts here -------------------->
+  <div id="invitation_card_container" >
+    <div class="container-particles-js" id="particles-js">
+      <div class="envelope" id="VIP-CODE">
+        <div class="title-invitation"><h1><i class="fa fa-angle-double-left" aria-hidden="true"></i> INVITACIÓN VIP <i class="fa fa-angle-double-right" aria-hidden="true"></i></h1></div>
+        <form id="consulta_invitado" class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" id="id_invitado" placeholder="Ingrese su código de invitación" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="consulta-api">ENVIAR</button>
+        </form>
+        
+        <div class="loading">
+          <i class="fa fa-spinner fa-spin"></i> Cargando...
+        </div>
+        <div class="error-message">
+          <i class="fa fa-exclamation-circle"></i> Hubo un error. Por favor, inténtalo de nuevo.
+        </div>
+      </div>
+    
+      <div class="envelope paper">
+        <div id="prueba">
+        </div>
+        <div><i class="bi bi-chevron-down"></i></div>
+      </div>
+    </div>
+  
+
+  </div>
+  
+
+  <!----------------------- Invitation-card-section ends here -------------------->
+<!----------------------- SECTION VIP  -------------------->
+<section id="section-to-guests">
+  <!----------------------- about-section starts here -------------------->
+         <div class="container about-section padding-both" id="about">
+              <div class="row ">
+                 <div class="col-lg-12">
+                  <div class="headings">
+                    <h1>NOSOTROS</h1>
+                    <h2>Tenemos algo que decirles</h2>
+                  </div>
+                 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 box">
+                  <div class="gender g-1">
+                    <h1 class="text-right">El Novio</h1>
+                    <p class="text-novio">
+                      Queridos amigos y familiares, si reciben esta invitación es para anunciarles con felicidad, que al fin, luego de mucho tiempo y crecimiento tanto a nivel
+                      personal como en pareja, al fin se me hizo, Wendy aceptó ser mi esposa y yo su compañero, amante, querido y mejor amigo por lo que me queda de vida.
+                       <br><br>
+                      Estamos muy agradecidos de tenerlos en nuestras vidas y esperamos que nos acompañen en este día tan especial mientras celebramos nuestro amor y compromiso
+                      ante Dios y ante ustedes.
+                      <br><br>
+                      ¡Esperamos verlos pronto para compartir juntos esta alegría! 
+                     </p>
+                     <div class="male text-right"> <i class="fas fa-male"></i>Angel Christopher Ramirez Gomero</div>     
+                        
+   
+                    <div class="social-icon text-right">
+                     <span class="s-icon fa  fa-twitter"></span>    
+                     <span class="s-icon fa  fa-facebook"></span>
+                     <span class="s-icon fa  fa-linkedin"></span>
+                     <span class="s-icon fa  fa-instagram"></span>
+                   </div> 
+                  </div>
+                </div>
+                
+                <div class="col-md-6 col-sm-6 col-xs-6 box2"><img data-src="img/about-1.jpg" alt="about-1.jpg"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6  box2"><img data-src="img/about-2.jpg"  alt="about-2.jpg"></div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6 box">
+                  <div class="gender g-2">
+                    <h1>La Novia</h1>
+                    <p class="text-novia">
+                      Hola a todos, queridos amigos y familiares. Tengo una noticia muy importante para compartir con ustedes: ¡Me voy a casar!
+                      <br><br>
+                      En los casi 11 años desde que conocí a Angel, hemos compartido innumerables experiencias llenas de propósito, aprendizaje 
+                      mutuo, alegrías y momentos decisivos. Después de todo este tiempo, Angel se ha convertido en mi confidente, socio, amigo, secuaz, 
+                      la persona que amo, elijo y seguiré eligiendo cada día para compartirlo todo, mi futuro esposo.
+                      <br><br>
+                      Quiero agradecerles por ser parte de nuestra historia y por ser testigos de este gran paso en nuestras vidas.
+                      Esperamos verlos pronto y compartir juntos la felicidad de nuestro matrimonio. ¡Nos vemos en la boda!
+                    </p>
+                    
+                    
+                    <div class="male"><i class="fas fa-female"></i>Wendy Maylin Aranda Billota</div>
+
+                    <div class="social-icon">
+                      <span class="s-icon fa  fa-twitter"></span>    
+                      <span class="s-icon fa  fa-facebook"></span>
+                      <span class="s-icon fa  fa-linkedin"></span>
+                      <span class="s-icon fa  fa-instagram"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+         </div>
+
+
+
+  <!----------------------- about-section Ends here -------------------->
+  
+  <!--Phrase-section-->
+  <div class="container phrase-section">
+    <div class="background-overlay"></div>
+    <div class="elementor-shape elementor-shape-top" data-negative="false"></div>
+    <div class="elementor-shape elementor-shape-bottom" data-negative="false"></div>
+    <div class="phrase-container">
+      <div class="contenido">
+        <p class="quote"><i class="fas fa-quote-left"></i>
+          Cuando te das cuenta de que
+          quieres pasar el resto de tu vida con alguien, deseas que el resto de tu vida
+          empiece lo antes posible.<i class="fas fa-quote-right"></i></p>
+      </div>
+    </div>
+    
+  </div>
+
+  <!--------------------- Section pHrase --------------------->
+ 
+
+  <!---------------------- Event Section starts here ------------------->
+
+  <div class="container Event-section padding-both" id="event-section">
+    <div class="row ">
+      <div class="col-lg-12  ">
+       <div class="headings">
+         <h1>LA BODA</h1>
+         <h2>El Gran Día</h2>
+       </div>
+      </div>
+   </div>
+   
+  <div class="row">
+     <div class="co-md-12 para-section">
+       <p> 
+        Así como en el desembarco de Normadía, el día D, y el alunizaje, todo está 
+        preparado y programado con un reloj suizo para que este día sea inolvidable.
+        <br><br>
+        Y como no podría ser de otra forma, será en la mejor ciudad del norte chico de Lima : 
+        <br><strong>¡ Barranca !</strong>
+      </p>
+     </div>
+
+    <div class="col-md-12 col-sm-12  mein-event ">
+       <div class="col-md-6 col-sm-6 events event-left">
+         <img src="img/event-1.jpg" alt="event-1.jpg">
+         <h1>" Boda Religiosa "</h1> 
+         <h3><strong>Iglesia Evangélica Peregrina</strong></h3>
+          <h3>Nicolás de Piérola 565 , Barranca</h3>
+          <h3>( 03:00PM - 04:00PM )</h3>
+          <iframe title="Ubicación de iglesia evangélica Peregrina" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.8021934944786!2d-77.766757!3d-10.749723!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910737e83f907e95%3A0x7d666c0308769911!2sNicol%C3%A1s%20de%20Pi%C3%A9rola%20565%2C%20Barranca%2015169!5e0!3m2!1ses!2spe!4v1679711449358!5m2!1ses!2spe" width="400" height="300" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Nicol%C3%A1s%20de%20Pi%C3%A9rola%20565%2C%20Barranca%2015169" rel="noopener" target="_blank" class="btn btn-primary btn-ruta"> Iniciar la ruta </a>
+          <!--Dale estilo css a este btn-ruta para que esté debajo del iframe centrado y tenga un estilo alucinante -->
+          
+        </div>
+        
+        <div class="col-md-6 col-sm-6 events event-right">
+          <img src="img/event-2.jpg" alt="event-2.jpg">
+          <h1>" Recepción y Fiesta "</h1>
+          <h3> <strong> CASA BLANCA  - GORRIONCITO</strong> </h3>
+          <h3>Urb. La Florida Mz. R Lt. 14/ Calle Miguel Grau</h3>
+          <h3>( 5:30PM - Últimas consecuencias)</h3>
+          <iframe title="Ubicación de Casa Blanca" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d980.0182446102347!2d-77.77492167075444!3d-10.728854699522106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDQzJzQzLjkiUyA3N8KwNDYnMjcuOCJX!5e0!3m2!1ses!2spe!4v1679715469501!5m2!1ses!2spe" width="400" height="300" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=-10.7288611,-77.77438889999999" rel="noopener" target="_blank" class="btn btn-primary btn-ruta"> Iniciar la ruta </a>
+
+          <!--a partir del src del iframe con title="Ubicación de Casa Blanca" crea un https://www.google.com/maps/dir/?api= -->
+          
+    
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
+<!----------------------- Event Section Ends here -------------------->
+  <!--------------------- Story section starts here --------------------->
+  
+  <section id="Protocol-section">
+    <div class="container story-section padding-both" id="story">
+
+    <div class="row mb-6">
+      <div class="col-lg-12">
+       <div class="headings" >
+         <h1>RECOMENDACIONES</h1>
+         <h2>Los pequeños detalles importan</h2>
+       </div>
+      </div>
+   </div>
+
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12  s-box1 text-right border-r"><img src="img/story-1.jpg"  alt="story-1.jpg"></div>
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2">
+        <h1>¡ NOS VAMOS DE VIAJE !</h1>
+       <h3>¡ A Nueva Zelanda !</h3>
+       <p>
+        Estamos a punto de embarcarnos en una aventura de un año, ¡y queremos que nos acompañen en 
+        este momento tan especial de nuestra vida!
+       </p>
+      </div>
+    </div>   
+   </div>
+   
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">       
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2 border-r">
+        <h1>¡ VESTIMENTA DE GALA !</h1>
+       <h3>¡ Luciremos radiantes !</h3>
+       <p>
+        ¡Vamos a vestirnos de gala para esta ocasión especial ! Para asegurarnos de que todos luzcan radiantes, 
+        les recomendamos evitar vestidos en los colores blanco, rosa gold y verde agua.<br>¡Será una noche inolvidable!
+      </p>
+      </div>
+
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1 "><img src="img/story-2.jpg" alt="story-2.jpg"></div>
+    </div> 
+   </div>
+
+
+   <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1 text-right border-r"><img src="img/story-3.jpg" alt="story-3.jpg"></div>       
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2">
+        <h1>¡EL ESTADO DE ÁNIMO!</h1>
+       <h3>¡Ven con la mejor actitud!</h3>
+       <p>
+        Sabemos que pueden ocurrir imprevistos, ¡pero este día será inolvidable!
+         Queremos que vengan felices y con muchas ganas de celebrar con nosotros.
+       </p>
+      </div>     
+    </div> 
+   </div>
+
+
+   <div class="row" id="last-story">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-l-r mr-btm story-row">              
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box2 border-r">
+        <h1>¡LAS BEBIDAS!</h1>
+       <h3>¿Listos para brindar?</h3>
+       <p>
+        No te preocupes por las bebidas, tenemos cervezas y vinos listos para que disfrutes al máximo. Si prefieres otra bebida, ¡tráela contigo y compártela con nosotros! ¡Celebremos juntos y hagamos de esta noche algo inolvidable!
+        </p>
+      </div>   
+      
+      <div class="col-md-6 col-sm-6 col-xs-12 s-box1"><img src="img/story-4.jpg" alt="story-4.jpg"></div>
+    </div> 
+   </div>
+   
+
+    </div>
+    
+  </section>
+
+  <!--------------------- Story section starts here --------------------->
+
+  <!---------------------- REGALOS section starts here  ------------------>
+  <section id="regalos" class="regalos-section">
+    <div class="container regalos-container">
+      <div class="row">  
+        <div class="headings">
+          <h1>REGALOS</h1>
+          <h2>¡ La felicidad no tiene precio,</h2>
+          <h2>pero tu contribución ayuda !</h2>
+        </div>
+      </div>
+
+      <div class="row message-section"">
+        <div class="para-section">
+          <p>
+            ¿Te gustaría hacernos un regalo pero no sabes qué? No te preocupes, 
+            tenemos la solución : ¡Efectivo! , ese regalo universal que nunca falla 
+            en sacarnos una sonrisa y que nos será de gran ayuda durante el viaje
+            de trabajo por un año que estamos a punto de emprender.
+          </p>
+        </div>
+
+      </div>
+
+      
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/bcp-logo.jpg" alt="Logo BCP">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>BANCO BCP - NOVIO</h3>
+            <p>Cta. Soles : <span class="cuenta">xxxxxxx</span></p>
+            <p>Cta. Interbancaria Soles :<br>
+              <span class="cuenta">
+              xxxxxxxxxxxxxxxxx
+            </span>
+            </p>
+            <p>Cta. Dólares: 
+              <span class="cuenta">
+                xxxxxxxxxxxx
+              </span> 
+              </p>
+          </div>
+        
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>SCOTIABANK - NOVIA</h3>
+            <p>Cta. Soles : <span class="cuenta">xxxxxxxxxx3</span></p>
+            <p>Cta. Interbancaria Soles :<br>
+              <span class="cuenta">
+                xxxxxxxxxxxxxx
+            </span>
+            </p>
+            <p> 
+              <span class="cuenta">
+                
+              </span> 
+              </p>
+          </div>
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/Scotiabank.jpg" alt="Logo BCP">
+          </div>
+
+        
+        </div>
+        
+      </div>
+
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/yape-novio.jpg" alt="Yape QR novio">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>YAPE - NOVIO</h3>
+            <p> Escanea el código QR y haz tu regalo con Yape.</p>
+            <p><span class="celular-yape"><i class="glyphicon glyphicon-earphone gly-yape"></i>
+               xxxxxxxx</span></p>
+          </div>
+        
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <h3>YAPE - NOVIA</h3>
+            <p>También puedes usar plin con el mismo número. </p>
+            <p><span class="celular-yape"><i class="glyphicon glyphicon-earphone gly-yape"></i>
+               xxxxxxxxxxxxx</span></p>
+          </div>
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/yape-novia.jpg" alt="QR Yape novia">
+          </div>
+
+        
+        </div>
+        
+      </div>
+
+      <div class="row message-section">
+        <div class="para-section">
+          <p>
+            ¡Oh, pero si quieres sorprendernos con otra cosa, no te preocupes! 
+            Nos encantaría recibir cualquier detalle que salga de tu corazón y tenga un toque
+             personal. Nosotros apreciamos mucho el 
+             cariño y la estima que nos demuestran. ¡Gracias de antemano por tu generosidad! 
+          </p>
+        </div>
+
+      </div>
+
+      <div class="row regalos-row">
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/BCA-CRISTO.jpg" alt="Yape QR novio">
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <div class="row">
+              <h3>Dirección en Barranca</h3>
+            </div>
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-map-marker"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  <span class="cuenta">
+                    Pasaje Jerusalen 121<br>
+                  </span> 
+                  Frente al colegio inicial María de los Ángeles
+                </p>
+
+              </div>
+              
+            </div>
+
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-map-marker"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  <span class="cuenta">
+                    xxxxxxxxxxxxx<br>
+                  </span> 
+                  " xxxxxxxxx "
+                </p>
+
+              </div>
+              
+            </div>
+           
+          </div>
+        
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-xs-6 box-regalos">
+          
+          <div class="col-sm-4 col-md-4 col-xs-4 descripcion-regalo">
+            <div class="row">
+              <h3>Dirección en Lima</h3>
+            </div>
+
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-map-marker"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  <span class="cuenta">
+                    Jirón xxxx<br>
+                  </span> 
+                  " Condominio xxxxx "
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-svg">
+                <i class="glyphicon glyphicon-earphone gly-yape"></i>
+              </div>
+              <div class="col-dirección">
+                <p>
+                  Llamar al XXXXXXX para coordinación previa.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="col-sm-2 col-md-2 col-xs-2 logo-regalos">
+            <img src="img/CONDOMINIO.jpg" alt="QR Yape novia">
+          </div>
+
+        
+        </div>
+        
+      </div>
+
+
+    
+    
+    
+    </div>
+
+  
+    
+  </section>
+
+  
+
+<!----------------------- REGALOS section Ends here  ------------------->
+
+
+
+  <!-------------------- Gallary section starts here -------------------->
+   
+  <div class="container-fluid Gallary-section padding-both" id="gallary">
+       
+    <div class="row ">
+      <div class="col-lg-12 ">
+       <div class="headings">
+         <h1>GALERÍA</h1>
+         <h2>¡ Recordar es volver a vivir !</h2>
+       </div>
+      </div>
+   </div>
+  
+   <div class="gallary owl-carousel-2 owl-carousel owl-theme">  
+      <div class="item">
+        <img src="img/gallery-1.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/gallery-2.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/gallery-3.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/gallery-4.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/gallery-5.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/gallery-6.jpg" alt="gallery-1.jpg">
+        <div class="font">
+          <i class="plus fas fa-plus"></i>
+        </div>
+      </div>   
+     
+  </div>
+
+
+
+  </div>
+
+
+
+
+  <!--------------------- Gallary section Ends here --------------------->
+
+
+   <!----------------- Family_Friedn section starts here --------------->
+
+  <div class="container friend_family-section padding-both" id="family">
+    <div class="row ">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="headings">
+         <h1>NUESTRAS FAMILIAS</h1>
+         <h2>Uniendo Historias</h2>
+       </div>
+      </div>
+   </div>
+
+   <div class="row ">
+    
+    <div class="friend_family">
+
+       <div class="familys">
+        <img src="img/groomsmen-1.jpg" alt="groomsmen-1.jpg">
+         <h1>Familia del Novio</h1>
+         <h3>Los Gorrioncito - " Gomero "</h3>
+         <p><strong>Novio :</strong> "Mi familia es mi fortaleza y mi apoyo. Comienza con el roble que son mi papá Lucho Gomero Bottoni, y mi doña Andrea Avelina. Luego continúa con mis tíos y primos, para finalmente llegar a mi tronco, 
+          que es mi querida y hermosa mamá Yanet, acompañada de Junior, quien ha hecho todo lo posible por ser un padre para mí y mis hermanos. Los verán en la boda, y quiero compartirles que para mí, cuando me dicen familia, 
+          pienso en todos ellos. Gorrioncito es una familia que crece con el tiempo, haciéndose más fuerte y siempre presente en cada momento importante."
+         </p>
+         <div class="social-icon">
+          <span class="s-icon fa fa-angle-double-left"></span>
+          <span class="s-icon fa fa-chess-king"></span>
+          <span class="s-icon fa fa-angle-double-right"></span>
+        </div>
+       </div>
+
+       <div class="familys">
+        <img src="img/groomsmen-2.jpg" alt="groomsmen-2.jpg">
+        <h1>Familia de la Novia</h1>
+        <h3> Familia Aranda Billota</h3>
+        <p><strong>Novia :</strong> "Mis padres son el pilar más fuerte en mi vida. Ellos me dieron las herramientas para perseguir mis sueños y me dan aliento en los momentos difíciles. 
+          Aunque ha sido poco el tiempo juntos desde que salí de casa, aprecio y atesoro cada momento compartido. Mis hermanos, Alexis y Manuel,  a quienes amo porque son mis cómplices, amigos y protectores. Pero la familia Aranda Billota es mucho más grande, incluye tíos, primos y mi querida mamita Paula, a quien amo con todo mi corazón. Me siento inmensamente feliz de tenerlos a todos y compartir con ellos este día tan especial."
+         </p>
+        <div class="social-icon">
+          <span class="s-icon fa fa-angle-double-left"></span>
+          <span class="s-icon fa fa-chess-queen"></span>
+          <span class="s-icon fa fa-angle-double-right"></span>
+      </div>
+
+
+    </div>
+
+ </div>
+
+
+
+  </div>
+
+   <!----------------- Family_Friedn section Ends here --------------->
+
+
+
+   
+
+  </section>
+
+   <!----------------- footer-section starts here ---------------------->
+   <div class="container-fluid footer-section padding-both">
+
+    <div class="row ">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+       <div class="headings">
+        
+         <h2>¡ Gracias por tanto !</h2>
+       </div>
+      </div>
+   </div>
+
+
+   <div class="row">
+     <div class="col-md-12">
+      <p class="para-style">angel.ramirez@unmsm.edu.pe</p> <p>ramirezgomeroangel@gmail.com</p>
+
+      <div class="copyrights">
+        <p>&copy; <span class="c-o">Developer </span> Designed by <span class="c-o">AngelRamirez</span></p>
+      </div>
+      
+     </div>
+   </div>
+
+   </div>
+
+   <!----------------- footer-section Ends here ---------------------->
+  
+
+
+
+
+
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+       <!------------------------- font-awesome 5 starts here  --------------------------------->
+       <script src="https://kit.fontawesome.com/b78ad50dcc.js"
+       crossorigin="anonymous"></script>
+     <!------------------------- font-awesome starts here  --------------------------------->
+ 
+      <!-------------------------owl-carousel  starts here  --------------------------------->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+ 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
+     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+      <!-------------------------owl-carousel  ends here  --------------------------------->
+ 
+ 
+ 
+     <!----------------------------------- js links starts ------------------------------>
+     <script src="js/script.js"></script>
+     <script src="js/particles.js"></script>
+     <script src="js/app.js"></script>
+     <!----------------------------------- js links ends ------------------------------>
+  </body>
+</html>

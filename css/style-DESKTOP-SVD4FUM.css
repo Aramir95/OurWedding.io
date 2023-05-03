@@ -1,0 +1,1335 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Montserrat);
+
+}
+
+html{
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.padding-both{
+  padding: 60px 0;
+}
+
+:root {
+  --orange: #e47a2e;
+  --light-grey: #edf5f7;
+  --dark-grey:#858aae;
+  --cream-grey:#6c757e;
+  --light-cream-grey:#818491;
+  --white: #fff;
+  --dark: #121f38;
+  --Montserrat: "Montserrat", sans-serif;
+  --Great-Vibes: "Great Vibes", cursive;
+}
+
+.navigation{
+  width: 100%;
+  background-color: var(--dark); 
+  color: var(--white);  
+  position: sticky; 
+  top: 0px;
+  z-index: 5;
+}
+
+ .navigation  nav {
+  position: relative;
+  line-height: 30px;
+  padding: 1px;
+  /* background-color: rebeccapurple; */
+  
+}
+
+ .navigation  nav .logo{ 
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%); 
+}
+
+ .navigation  nav .logo a{
+  color: var(--white);
+  font-family: var(--Great-Vibes);
+  font-size: 2.8rem;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+ .navigation  nav .logo a .jr{
+  color: var(--orange);
+  font-family: var(--Great-Vibes);
+}
+
+ .navigation  nav  .menu{
+  text-align: right;
+
+}
+
+
+
+.navigation .menu li{
+  list-style: none;
+  display: inline-block;
+  padding: 20px 0;
+}
+
+.navigation .menu li a{
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  margin-right:30px;
+  font-family: var(--Montserrat);
+  font-weight: 600;
+  transition:all 1s ease;
+}
+
+.navigation .menu li a:hover{
+  color: var(--orange);
+
+}
+
+.navigation .menu li .active{
+  color: var(--orange);
+}
+
+.navigation .menu li:nth-child(1),
+.navigation .menu li:nth-child(2),
+.navigation .menu li:nth-child(3),
+.navigation .menu li:nth-child(4)
+{
+float: left;
+}
+
+.navigation  nav .hamburger{  
+  display: none;
+}
+
+
+ 
+
+/* .nav-hide-show{
+ position: fixed;
+ top: 300px;
+ opacity: 1;
+} */
+
+
+/*--------------------- header- starts here  -----------------*/
+
+
+
+.owl-carousel-1{
+  position: relative;
+}
+
+.owl-carousel-1 .item1{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/carousel-1.jpg);
+
+}
+
+.owl-carousel-1 .item2{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/carousel-2.jpg); 
+}
+
+.owl-carousel-1 .item{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: slide-img 9s  infinite linear;
+
+  
+}
+
+@keyframes  slide-img{
+
+  0%{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(../img/carousel-1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ 
+  }
+
+  35%{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/carousel-2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+  }
+
+   
+  
+}
+
+header{
+  position: relative;
+}
+
+header .caption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--white);
+  z-index: 1;
+  text-align: center;
+}
+
+
+header .caption h1{
+  font-family: var(--Great-Vibes);
+  font-size: 8vw;
+  font-weight: 400;
+
+
+}
+
+
+
+header .caption h2{
+  border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  width: 100%;
+  margin: 2vw auto;
+  padding: 1vw 0;
+  font-family: var(--Montserrat);
+  font-weight: 400;
+  font-size: 2vw;
+ 
+
+}
+
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--Montserrat);
+  margin-top: 1vw;
+  font-size: 2.2rem;
+}
+
+.countdown-timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  width: 8vw;
+  height: 8vw;
+  border: 2px solid white;
+  gap: 0;
+}
+
+
+.countdown-number {
+  font-size: 4vw;
+  margin-bottom: 0rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.countdown-label {
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+}
+
+.countdown-date {
+  display: flex;
+  align-items: center;
+  margin-top: 0rem;
+  text-align: center;
+  width: 85%;
+}
+
+.countdown-date-text {
+  font-size: 2vw;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  justify-content: center;
+}
+
+.countdown-date-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #ffffff;
+  width: auto;
+  border-left: 2px solid #ffffff;
+  
+}
+
+.countdown-finished {
+  color: #fff5ee;
+  font-family: var(--Great-Vibes);
+  font-size: 3vw;
+  text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+
+
+
+
+header .owl-carousel-1 .owl-nav{
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+header  .owl-prev , header  .owl-next{
+position: absolute;
+z-index: 10;
+top: 50%;
+
+}
+
+
+
+
+header  .owl-prev{
+left: -5px; 
+background-color: var(--orange) !important;
+width: 80px !important;
+height: 80px !important;
+opacity: 0.6;
+transition: 0.5s;
+
+
+}
+
+header  .owl-next {
+right: -5px;
+background-color: var(--orange) !important;
+width: 80px !important;
+height: 80px !important;
+opacity: 0.6;
+transition: 0.5s;
+
+}
+
+header  .owl-prev:hover , header  .owl-next:hover{
+  opacity: 1;
+}
+
+/*--------------------- header Ends here  -----------------*/
+
+/*--------------- about section starts here --------------*/
+
+.headings{
+  text-align: center;
+  padding: 15px 0;
+}
+.headings h1{
+  color: var(--orange);
+  font-family: var(--Montserrat);
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.headings h2{
+  font-family: var(--Great-Vibes);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.about-section .box{
+ background-color:var(--light-grey);
+ padding: 106.5px 50px;
+}
+
+.about-section .box .gender h1{
+  font-family: var(--Montserrat);
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+
+.about-section .box .gender p{
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: var(--Montserrat);
+  color: var(--dark-grey);
+  padding: 8px 0;
+  line-height: 25px;
+
+}
+
+.about-section .box  .male {
+  color:var(--cream-grey);
+  font-size: 1.9rem;
+  font-family: var(--Great-Vibes);
+  font-weight: 400;
+  padding: 10px 0;
+
+}
+
+
+.about-section .box  .male i{ 
+  color: var(--orange);
+  padding-right: 15px;
+}
+
+
+.about-section .box .social-icon .s-icon{
+  font-size: 1.2rem;
+  color: var(--orange);
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid var(--orange);
+  margin-left: 5px;
+  transition:all 0.5s ease;
+}
+
+.box .social-icon .s-icon:hover{
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
+
+.about-section .box2{
+  padding: 0px;
+}
+
+.about-section .box2 img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/*--------------- about section Ends here --------------*/
+
+/*-----Phrasal section starts here ------------*/
+
+.phrase-section {
+  background-image: url(../img/phrase-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 67vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phrase-section .background-overlay {
+  background-color: rgba(139, 69, 19, 0.5); /* Marrón oscuro con opacidad */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Coloca la capa encima de la imagen de fondo */
+}
+
+
+
+.phrase-container {
+  height:80%;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.phrase-section .background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.68;
+  width: 100%;
+  position: absolute;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease, ease, ease;
+  transition-delay: 0s, 0s, 0s;
+  transition-property: background, border-radius, opacity;
+}
+
+.phrase-section  .contenido {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 3vw;
+  padding:4vh;
+  min-width: 50%;
+}
+
+.phrase-section  .contenido p {
+  color: white;
+  font-family: 'Cormorant Garamond';
+  font-size: 6vh;
+  font-weight: bold;
+  margin: 0;
+  z-index: 3;
+}
+
+.phrase-section .contenido .quote i {
+  font-size: 6vh;
+  margin-right: 2vh;
+  margin-left: 2vh;
+}
+
+
+/*-----Phrasal section ends here ------------*/
+
+/*-------------- Story section starts here ------------*/
+
+
+.story-section .s-box1{
+  padding-left: 0px; 
+  padding-right: 0px;
+}
+
+.story-section .s-box1 img{
+  width: 300px;
+}
+
+.story-section .border-r{
+  /* border-right: 2px solid var(--orange); */
+  padding-right: 0px;
+
+}
+
+
+
+.story-section .s-box2{
+  background-color: var(--light-grey);
+  padding:32px;
+ 
+}
+
+.story-section .s-box2 h1{
+  font-family: var(--Montserrat);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.story-section .s-box2 h3{
+  color: var(--dark-grey);
+  font-family: var(--Montserrat);
+  font-weight: 400;
+}
+
+.story-section .s-box2 P{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--Montserrat);
+  color: var(--dark-grey);
+  padding: 8px 0;
+  line-height: 25px;
+}
+
+
+/*-------------- Story section Ends here ------------*/
+
+/* --------- Gallary section starts here ------------- */
+
+.Gallary-section  {
+  margin: 100px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpg);
+  width: 100%;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 0px;
+  
+}
+
+.Gallary-section .gallary{
+  position: absolute;
+  top: 400px; 
+}
+
+.Gallary-section .headings  {
+  padding-top: 100px;
+}
+
+.Gallary-section .headings h2 {
+  color: var(--white);
+}
+
+.Gallary-section .gallary .item{
+  overflow: hidden;
+  position: relative;
+
+}
+
+.Gallary-section .gallary .item .font {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.Gallary-section .gallary .item:hover img{
+  transform:scale(1.2) ;
+  cursor: pointer;
+
+}
+
+.Gallary-section .gallary .item .font .plus{
+  color:var(--white);
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  padding: 14px;
+  border: 2px solid var(--white);
+  opacity: 0;
+  transition: 1s;
+}
+
+.Gallary-section .gallary .item:hover .font .plus{
+  opacity: 1;
+}
+
+.Gallary-section .gallary .item .font .plus:hover{
+  cursor: pointer;
+}
+
+.Gallary-section .gallary .item img{
+  width: 100%;
+  transition:1s ;
+}
+
+ .Gallary-section .owl-prev , .Gallary-section  .owl-next{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  
+  }
+
+  
+.Gallary-section .owl-carousel-2 .owl-nav{
+  color: var(--orange);
+  font-size: 3rem;
+  font-weight: bolder ;
+
+}
+
+.Gallary-section .owl-carousel-2 .owl-nav:hover{
+  color: var(--orange);
+}
+
+.Gallary-section  .owl-prev , .Gallary-section  .owl-next{
+position: absolute;
+z-index: 10;
+top: -100px;
+left: 50%;
+transform: translate(-120%, -50%);
+}
+
+
+.Gallary-section  .owl-prev{
+background-color: var(--white) !important;
+width: 70px !important;
+height: 70px !important;
+margin-right: 100px !important;
+}
+
+.Gallary-section  .owl-next {
+background-color: var(--white) !important;
+width: 70px !important;
+height: 70px !important;
+padding-left: 15px !important;
+margin-left: 100px !important;
+}
+
+
+
+.Gallary-section .owl-prev:hover , .Gallary-section  .owl-next:hover{
+  opacity: 1;
+  color: var(--orange) !important;
+}
+
+/* --------- Gallary section Ends here ------------- */
+
+/*-------------- Event Section starts here ----------*/
+
+.Event-section .para-section p{
+  color: var(--cream-grey);
+  font-family: var(--Montserrat);
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 25%;
+  padding-bottom: 20px;
+}
+
+
+
+.Event-section .mein-event .event-left {
+  text-align: right;
+  border-right: 2px solid var(--orange);
+  padding-right: 30px;
+}
+
+.Event-section .mein-event .event-right{
+  padding-left: 30px;
+}
+
+.Event-section .mein-event .events img{
+  width:60%; 
+}
+
+.Event-section .mein-event .events h1{
+  font-size: 1.6rem;
+  color: var(--dark);
+  font-family: var(--Montserrat);
+  font-weight:600;  
+}
+
+.Event-section .mein-event .events h3{
+  color: var(--light-cream-grey) ;
+  font-size: 1.3rem;
+  font-family: var(--Montserrat);
+  font-weight: 400;
+}
+
+
+
+
+/*--------------- Event Section Ends here -----------*/
+
+
+/*------------- Family_Friedn Section Starts here -------------*/
+
+.friend_family-section .btn-center{
+  text-align: center;
+  width: 100%;
+}
+
+.friend_family-section .btn-center .btns{
+  border: 2px solid var(--orange);
+  background: transparent;
+  font-family: var(--Montserrat);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 9px 2.5%;
+  border-radius: 0;
+  color: var(--orange);
+  margin-left: 8px;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.friend_family-section .btn-center .btns:hover{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.friend_family-section .btn-center .btns:focus{
+  outline: none;
+}
+
+.friend_family-section .friend_family{
+  width: 100%;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 30px;
+}
+
+.friend_family-section .friend_family .familys{
+  background-color: var(--light-grey);
+  text-align: center;
+  font-family: var(--Montserrat);
+}
+
+.friend_family-section .friend_family .familys img{
+  width: 100%;
+}
+
+.friend_family-section .friend_family .familys h1{
+  font-size: 1.6rem;
+  color: var(--dark);
+  font-family: var(--Montserrat);
+  font-weight: 600;
+}
+
+.friend_family-section .friend_family .familys h3{
+  color: var(--cream-grey);
+  font-size: 1.1rem;
+  font-family: var(--Montserrat);
+  font-weight: 400;
+}
+
+ .familys .social-icon .s-icon{
+  color: var(--orange);
+  font-size: 1.1rem;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.familys .social-icon .s-icon:hover{
+  color: var(--dark);
+  cursor: pointer;
+}
+
+
+
+
+/*------------- Family_Friedn Section Ends here --------------*/
+
+/*----------------- RSVP section starts here -----------------*/
+
+ form{
+   width: 760px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;  
+ }
+
+
+ form .w-50{
+   width: 48.5%;
+ }
+
+ form .w-100{
+   width: 100%;
+ }
+ 
+ form input{
+   width: 100%;
+   padding:15px 3%;
+   text-transform: capitalize;
+   font-size: 1.1rem;
+   font-family: var(--Montserrat);
+   font-weight: 400;
+   outline: none;
+   border: none;
+   background-color: var(--light-grey); 
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  
+ }
+
+ form input:focus , form .people_event select:focus , form .w-100 .massage:focus , form .btn .sub-btn:focus {
+  border-color: #f3c29f;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(228 122 46 / 25%);
+
+ }
+
+ form .people_event select{
+   width: 100%; 
+   padding:15px 3%;
+   text-transform: capitalize;
+   font-size: 1.1rem;
+   font-family: var(--Montserrat);
+   font-weight: 400;
+   outline: none;
+   border: none;
+   background-color: var(--light-grey);
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  
+
+ }
+
+ form .w-100 .massage{
+   width: 100%;
+   outline: none;
+   border: none;
+   background-color: var(--light-grey);
+   padding: 10px;
+   font-size: 1.1rem;
+   font-family: var(--Montserrat);
+
+ }
+
+ form .btn .sub-btn {
+   background-color: var(--orange);
+   color: var(--white);
+   outline: none;
+   border: none;
+   padding: 10px 6%;
+   margin-top: 5px;
+   font-size: 1.2rem;
+   font-family: var(--Montserrat);
+   transition: all .5s ease;
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;  
+     
+
+ }
+
+ 
+ form .btn .sub-btn:hover{
+    color: #fff;
+    background-color: #d1671b;
+    border-color: #c5611a;
+   }
+
+   
+   form input:focus , form .people_event select:focus , form .w-100 .massage:focus , form .btn .sub-btn:focus {
+    border-color: #f3c29f;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(228 122 46 / 25%);  
+    
+   }
+
+
+
+/*------------------- RSVP section Ends here -------------------*/
+
+
+/*----------------- footer-section starts here -----------------*/
+
+
+
+
+/*----------------- footer-section Ends here -----------------*/
+.footer-section {
+  background-color: var(--dark);
+  text-align: center;  
+  color: var(--white);
+  
+}
+
+.footer-section .headings h2{
+  color: var(--white);
+  font-size: 4.8rem;
+}
+
+.footer-section .social-icon {
+  margin-bottom: 25px;
+}
+
+.footer-section .social-icon .s-icon{
+  border: 2px solid var(--white);
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-right:5px;
+  transition: all .5s ease;
+}
+
+.footer-section .social-icon .s-icon:hover{
+  color: var(--dark);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.footer-section p{
+  display: inline;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  font-family: var(--Montserrat);
+
+  
+}
+ 
+.footer-section .para-style {
+  border-right: 2px solid var(--white); 
+}
+
+.footer-section .copyrights{
+  margin-top: 20px;
+}
+
+.footer-section .copyrights p .c-o{
+  color: var(--orange);
+}
+
+
+
+/*---------------- media starts here ---------------*/
+
+@media  only screen and (min-width:1200px){
+
+  .navigation .menu{
+    display: block !important;
+    height: auto !important;
+  }
+}
+
+
+
+@media only screen and (max-width:1199px){
+  
+  .about-section .box {   
+    padding: 52.5px 50px;  
+}
+
+.story-section .s-box2 {
+   padding: 20px;
+}
+
+}
+
+
+
+
+@media  only screen and (max-width:991px) {
+  
+  html{
+    font-size: 12px;
+  }
+
+
+  
+
+
+
+  .navigation  nav{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+    z-index: 999;    
+    /* background-color: yellowgreen; */
+  }
+.navigation  nav .logo{
+  position: static;
+  transform: translateX(0%);
+  width: 80%;
+  /* background-color: #e47a2e; */
+
+}
+
+.navigation  nav .hamburger{
+  display: block;
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  }
+
+.navigation  nav .hamburger .icon-bars{
+  font-size: 1.8rem;
+  border: 1px solid var(--light-grey);
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+nav .hamburger .icon-bars:hover{
+ border: 1px solid var(--orange);
+ color: var(--orange);
+ cursor: pointer;
+
+}
+
+
+
+ .navigation  nav .menu{
+   position: absolute;
+   top: 60px;
+   left: -600px;
+   z-index: 999;
+   width: 40%;
+   height: 100vh;
+   padding:  30vh 0;
+   transition:all 0.5s ease;
+   text-align: center;  
+   background-color: #121f38;
+}
+
+.navigation  nav .active{
+   left: 0px; 
+}
+
+.navigation  nav .menu li{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 0px;
+}
+
+.navigation .menu li:nth-child(1),
+.navigation .menu li:nth-child(2),
+.navigation .menu li:nth-child(3),
+.navigation .menu li:nth-child(4)
+{
+float: none !important;
+}
+
+
+.about-section .box {
+  padding: 13.7px 50px;
+}
+
+
+
+.story-section .padding-l-r{
+  padding: 0px;
+}
+
+
+.story-section .s-box1 img {
+  width: 374px;
+}
+
+
+.story-section  .s-box2{
+  /* background-color: violet; */
+  padding: 60px 20px;
+  /* text-align: center; */
+}
+
+.Event-section .mein-event .events img {
+  width: 100%;
+}
+
+.Event-section .para-section p {
+  font-size: 1.5rem;
+}
+
+
+.friend_family-section .friend_family {
+  grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+
+
+@media only screen and (max-width:767px){
+
+
+   .about-section{
+     width: 65%;    
+   }
+
+   .about-section .box{
+     padding: 50px;    
+   }
+
+   .about-section .m-50{
+     margin-bottom: 50px;
+   }
+
+   .about-section .box .gender h1 {
+     text-align: center;
+   }
+
+   .about-section .box .gender p {
+     text-align: center;
+     font-size: 1.4rem;
+   }
+
+   .about-section .box .male {
+     text-align: center ;
+   }
+
+   .about-section .box  .social-icon{
+     text-align: center;
+   }
+
+
+   .story-section {
+      width: 70%;
+  }
+
+  .story-section .mr-btm{
+    margin-bottom: 50px;
+  }
+
+  .story-section .s-box1 img{
+    width: 65%;
+  }
+
+  .story-section .s-box1 ,  .story-section .s-box2 {
+    text-align: center;
+  }
+
+
+  .Event-section {
+    width: 70%;
+  }
+
+  .Event-section .para-section p{
+    padding: 0px 0 20px 0 ;
+ 
+  }
+
+   
+  .Event-section .mein-event .events{
+    text-align: center;
+    margin-bottom: 25px;
+  
+    }
+
+  .Event-section .mein-event .events img{
+    width: 70%;  
+  }
+
+
+  .Event-section .mein-event .event-left{
+    border-right: none;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .Event-section .mein-event .event-right{
+    padding: 0px;
+
+  }
+
+  .friend_family-section{
+    width: 65%;
+  }
+
+  .friend_family-section .friend_family {
+    grid-template-columns: repeat(1,1fr);  
+}
+
+.RSVP-section form{
+  width: 70%;
+}
+
+.RSVP-section form .w-50{
+  width: 100%;
+}
+
+
+}
+
+
+@media only screen and (max-width:521px){
+  .headings h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+
+
+
+@media only screen and (max-width:467px){
+
+  .navigation nav .menu {
+    width: 50%;
+  }
+  
+
+  .about-section{
+    width: 80%;
+   
+  }
+
+
+  .story-section{
+    width: 80%;
+  }
+
+  .story-section .s-box1 img{
+    width:100%;
+  }
+
+  .Event-section .mein-event .events img {
+        width: 100%;
+}
+
+
+
+}
+
+.music {
+	display: none;
+}
+
+
+/* Estilos para pantallas menores a 768px */
+@media screen and (max-width: 768px) {
+  header .caption{
+    width: 70%;
+    }
+  
+    header .caption h1{
+      font-size: 12.1vw;}
+    
+    header .caption h2{
+      font-size: 6vw;
+      margin: 8vw auto;
+      padding: 2vw 0;
+    }
+  
+    .countdown {
+      margin-top: 4vw;
+    }
+    
+    .countdown-finished {
+      font-size: 8vw;
+    }
+    
+    .countdown-date{
+      width: 100%;
+    }
+  
+    .countdown-date-text {
+      font-size: 4vw;
+      text-transform: uppercase;
+      margin: 0 4vw;
+    }
+  
+    .countdown-item {
+      width: 15vw;
+      height: 18vw;
+      margin-right: 8px;
+    }
+    
+    
+    .countdown-number {
+      font-size: 9vw;
+    }
+    
+    .countdown-label {
+      font-size: 2.6vw;
+    }
+    .phrase-section .contenido p {
+      font-size: 2.7vh;
+    }
+    .phrase-section .contenido .quote i {
+      font-size: 3.3vh;
+      text-align: center;
+    }
+
+    .phrase-section .contenido{
+      max-width: 100%;
+    }
+
+}
